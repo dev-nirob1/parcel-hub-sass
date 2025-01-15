@@ -127,17 +127,79 @@ header {
         text-align: center;
 
         form {
-            max-width: 100%;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
 
-            input {
-                max-width: 100%;
-                padding: 10px;
-                display: block;
-                border-radius: 5px;
+            .track-input {
                 flex: 1;
+
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+/*services section*/
+#services {
+    h1 {
+        text-align: center;
+    }
+
+    .service-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+
+        .card {
+            border: 1px solid #f3f3f3;
+            text-align: center;
+            padding: 1.5rem;
+            border: 1px solid #f9f6f6;
+            border-radius: 8px;
+            cursor: pointer;
+
+            h4 {
+                font-size: variables.$heading-4-lg;
+            }
+        }
+
+        .card:hover {
+            box-shadow: 3px 6px 5px #ebebeb;
+            transition: .4s;
+        }
+    }
+}
+
+#testimonials {
+    h1{
+        text-align: center;
+    }
+    .testimo-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+
+        .tesimo-card {
+            padding: 20px;
+            border: 1px solid #f9f6f6;
+
+            .card-header {
+                display: flex;
+                gap: 10px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid #f9f6f6;
+                    border-radius: 50%;
+                }
             }
         }
     }
