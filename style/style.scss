@@ -1,0 +1,156 @@
+@forward "./base/reset-styles";
+@use "./utils/variables";
+@use "./base/typography";
+@use "./base/common-styles";
+@use "./utils/mixins";
+
+
+/*header section*/
+header {
+    background-color: variables.$secondary-color;
+    color: #fff;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        font-weight: 500;
+
+        figure {
+            order: 1
+        }
+
+        ul {
+            display: variables.$flex-none;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            order: 2;
+        }
+
+        @include mixins.responsive(medium) {
+            ul {
+                display: variables.$flex;
+            }
+        }
+
+        .login-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            order: 3;
+
+            span {
+                color: variables.$primary-color
+            }
+
+            .hamburger {
+                display: block;
+                font-size: 1.3rem;
+                cursor: pointer;
+            }
+
+            @include mixins.responsive(medium) {
+                .hamburger {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/*banner section*/
+#banner {
+    background-color: variables.$primary-color;
+    color: #fff;
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+
+        .hero-img,
+        .hero-content {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-img img {
+            width: 100%;
+        }
+    }
+
+    @include mixins.responsive(medium) {
+        .hero {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+/*about section*/
+#about {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-img {
+            flex: 1;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include mixins.responsive(medium) {
+        .container {
+            flex-direction: row;
+        }
+    }
+}
+
+#track-product {
+    color: #fff;
+    background-color: variables.$primary-color;
+
+    .content {
+        max-width: 780px;
+        text-align: center;
+
+        form {
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            input {
+                max-width: 100%;
+                padding: 10px;
+                display: block;
+                border-radius: 5px;
+                flex: 1;
+            }
+        }
+    }
+}
+
+/*footer */
+footer {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: variables.$secondary-color;
+
+    @include mixins.responsive(medium) {
+        padding: 20px;
+    }
+}

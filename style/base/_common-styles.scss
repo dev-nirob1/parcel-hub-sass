@@ -1,0 +1,54 @@
+@use "./../utils/variables";
+@use "./../utils/mixins";
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+a {
+    color: inherit;
+}
+
+a {
+    padding: 5px 10px;
+}
+
+a:hover {
+    color: variables.$primary-color;
+    transition: .4s;
+    animation-timing-function: ease-in-out;
+    text-decoration: underline;
+}
+
+p {
+    margin: variables.$margin-y-sm
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: variables.$para-size-lg;
+}
+
+section {
+    padding: variables.$section-padding-sm;
+}
+
+@include mixins.responsive(medium) {
+    section {
+        padding: variables.$section-padding-md;
+    }
+    .btn{
+        padding: 10px 20px;
+        font-size: variables.$para-size-lg;
+    }
+}
+
+@include mixins.responsive(large) {
+    section {
+        padding: variables.$section-padding-lg;
+    }
+}

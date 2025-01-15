@@ -1,0 +1,41 @@
+@use "../utils/mixins";
+
+//font-family
+$font-family: Rubik, sans-serif, Arial, sans-serif;
+//colors
+$primary-color: #FE7713;
+$secondary-color: #0F142B;
+$dark-color: #172541;
+$light-color: #565872;
+//h2
+$heading-1-sm: 2rem;
+$heading-1-md: 3rem;
+$heading-1-lg: 3.5rem;
+//h3
+$heading-2-sm: 1.8rem;
+$heading-2-md: 2.5rem;
+$heading-2-lg: 3rem;
+//h4
+$heading-4-sm: 1.2rem;
+$heading-4-md: 1.5rem;
+$heading-4-lg: 1.8rem;
+//p
+$para-size-sm: .8rem;
+$para-size-md: 1rem;
+$para-size-lg: 1.1rem;
+//margin y
+$margin-y-sm: .625rem 0;
+$margin-y-md: 1rem 0;
+$margin-y-lg: 1.25rem 0;
+
+//padding
+$section-padding-sm: 1rem;
+$section-padding-md: 2.5rem;
+$section-padding-lg: 4rem;
+// $btn-padding: 
+
+//flex 
+$flex: flex;
+$flex-none: none;
+$direction: row;
+

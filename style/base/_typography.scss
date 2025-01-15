@@ -1,0 +1,44 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+
+body {
+    font-family: variables.$font-family;
+}
+
+h1 {
+    font-size: variables.$heading-1-sm;
+}
+h2 {
+    font-size: variables.$heading-2-sm;
+}
+
+p {
+    font-size: variables.$para-size-sm;
+}
+
+
+@include mixins.responsive(medium) {
+    h1 {
+        font-size: variables.$heading-1-md;
+    }
+    h2 {
+        font-size: variables.$heading-2-md;
+    }
+
+    p,a {
+        font-size: variables.$para-size-md;
+    }
+}
+
+@include mixins.responsive(large) {
+    h1 {
+        font-size: variables.$heading-1-lg;
+    }
+    h2 {
+        font-size: variables.$heading-2-lg;
+    }
+
+    p, a {
+        font-size: variables.$para-size-lg;
+    }
+}
