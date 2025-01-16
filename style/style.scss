@@ -5,13 +5,25 @@
 @use "./utils/mixins";
 
 
+/* ====================================================
+   CSS Design Order Information
+   1. Header Section
+   2. Banner Section
+   3. About Section
+   4. Track Product Section
+   5. Services Section
+   6. Testimonials Section
+   7. Contact Section
+   8. Footer Section
+==================================================== */
+
 /*header section*/
 header {
     background-color: variables.$secondary-color;
     color: #fff;
 
     .navbar {
-        display: flex;
+        display: variables.$flex;
         justify-content: space-between;
         align-items: center;
         padding: 15px;
@@ -54,7 +66,7 @@ header {
 
             @include mixins.responsive(medium) {
                 .hamburger {
-                    display: none;
+                    display: variables.$flex-none;
                 }
             }
         }
@@ -64,15 +76,16 @@ header {
 /*banner section*/
 #banner {
     background-color: variables.$primary-color;
-    color: #fff;
+    color: variables.$white-color;
 
     .hero {
-        display: flex;
+        display: variables.$flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
         gap: 20px;
 
+        //hero image and content
         .hero-img,
         .hero-content {
             flex: 1;
@@ -80,20 +93,22 @@ header {
             height: 100%;
         }
 
+        //image
         .hero-img img {
             width: 100%;
         }
 
         .btn-container {
-            display: flex;
+            display: variables.$flex;
             align-items: center;
             flex-wrap: wrap;
             gap: 10px;
         }
 
+        // primary btn with hover 
         .btn-primary {
             background-color: variables.$primary-color;
-            color: white;
+            color: variables.$white-color;
             border: 1px solid variables.$dark-color;
         }
 
@@ -101,6 +116,7 @@ header {
             background-color: variables.$secondary-color;
         }
 
+        // secondary btn with hover 
         .btn-secondary {
             background-color: variables.$secondary-color;
             color: white;
@@ -113,9 +129,10 @@ header {
 
     }
 
+    // responsive medium devices 
     @include mixins.responsive(medium) {
         .hero {
-            display: flex;
+            display: variables.$flex;
             flex-direction: row;
         }
     }
@@ -125,16 +142,18 @@ header {
 #about {
 
     .container {
-        display: flex;
+        display: variables.$flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
         gap: 20px;
 
+        //description
         .about-content {
             flex: 1;
         }
 
+        //image
         .about-img {
             flex: 1;
 
@@ -143,9 +162,10 @@ header {
             }
         }
 
+        //btn with hover
         .btn {
             background-color: variables.$secondary-color;
-            color: #fff;
+            color: variables.$white-color;
         }
 
         .btn:hover {
@@ -154,6 +174,7 @@ header {
         }
     }
 
+    //responsive medium devices
     @include mixins.responsive(medium) {
         .container {
             flex-direction: row;
@@ -161,8 +182,9 @@ header {
     }
 }
 
+/*track-product section*/
 #track-product {
-    color: #fff;
+    color: variables.$white-color;
     background-color: variables.$primary-color;
 
     .content {
@@ -175,23 +197,38 @@ header {
             justify-content: center;
             gap: 10px;
 
+            //input 
             .track-input {
                 flex: 1;
 
                 input {
                     width: 100%;
                     padding: 10px;
-                    border: none;
+                    border: 1px solid variables.$secondary-color;
                     border-radius: 5px;
                 }
+
+            }
+
+            //btn with hover
+
+            .btn {
+                color: variables.$white-color;
+                background-color: variables.$secondary-color;
+                border: 1px solid variables.$dark-color;
+            }
+            
+            .btn:hover {
+                background-color: variables.$primary-color;
             }
         }
+
     }
 }
 
 /*services section*/
 #services {
-    box-shadow: 0 4px 10px 0 #58575733, 0 4px 10px 0 #63616130;
+    box-shadow: variables.$shadow;
 
     h1 {
         text-align: center;
@@ -214,8 +251,9 @@ header {
             }
         }
 
+        //card styles with hover effects
         .card:hover {
-            box-shadow: 0 4px 10px 0 #58575733, 0 4px 10px 0 #63616130;
+            box-shadow: variables.$shadow;
             transition: .4s;
         }
 
@@ -225,12 +263,14 @@ header {
         }
     }
 
+    //responsive for medium devices
     @include mixins.responsive(medium) {
         .service-container {
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
+    //responsive for large devices
     @include mixins.responsive(large) {
         .service-container {
             grid-template-columns: repeat(3, 1fr);
@@ -238,9 +278,10 @@ header {
     }
 }
 
+/*testimonials section*/
 #testimonials {
-    box-shadow: 0 4px 10px 0 #58575733, 0 4px 10px 0 #63616130;
-    
+    box-shadow: variables.$shadow;
+
     h1 {
         text-align: center;
     }
@@ -250,27 +291,32 @@ header {
         grid-template-columns: repeat(1, 1fr);
         gap: 1.5rem;
 
+        //testimonials cards styles
         .tesimo-card {
             padding: 20px;
-            box-shadow: 0 4px 10px 0 #58575733, 0 4px 10px 0 #63616130;
+            box-shadow: variables.$shadow;
             border-radius: 8px;
+
             .card-header {
                 display: flex;
                 gap: 15px;
                 margin-bottom: 10px;
+
                 img {
                     width: 50px;
                     height: 50px;
                     border: 1px solid variables.$light-color;
                     border-radius: 50%;
                 }
-                p{
-                margin: 5px 0; 
+
+                p {
+                    margin: 5px 0;
                 }
             }
         }
     }
 
+    //responsive for medium devices
     @include mixins.responsive(medium) {
         .testimo-container {
             grid-template-columns: repeat(2, 1fr);
@@ -278,13 +324,16 @@ header {
     }
 }
 
+/*contact section*/
 #contact {
-    .container {
+    box-shadow: variables.$shadow;
 
+    .container {
         h1 {
             text-align: center;
         }
 
+        //contact information like location, phone, emails
         .contact-info {
             display: flex;
             justify-content: space-between;
@@ -303,6 +352,7 @@ header {
                 }
             }
 
+            // form styles 
             .form {
 
                 input,
@@ -310,10 +360,12 @@ header {
                     display: block;
                     width: 100%;
                     margin: 10px 0;
+                    border: 1px solid variables.$secondary-color;
                     border-radius: 5px;
                     padding: 10px;
                 }
 
+                //btn with hover effects
                 .btn {
                     background-color: variables.$primary-color;
                     color: white;
@@ -328,6 +380,7 @@ header {
             }
         }
 
+        //responsive for medium devices
         @include mixins.responsive(medium) {
             .contact-info {
                 flex-direction: row;
@@ -344,6 +397,7 @@ footer {
     text-align: center;
     background-color: variables.$secondary-color;
 
+    //responsive
     @include mixins.responsive(medium) {
         padding: 20px;
     }

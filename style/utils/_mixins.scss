@@ -1,16 +1,21 @@
+/* ====================================================
+   mixins for responsive break-points
+==================================================== */
+
+//small devices
 @mixin responsive($breakpoint) {
     @if $breakpoint ==small {
         @media (min-width: 576px) {
             @content;
         }
     }
-
+    //for medium to larger devices
     @else if $breakpoint ==medium {
         @media (min-width: 768px) {
             @content;
         }
     }
-
+    //for larger devices
     @else if $breakpoint ==large {
         @media (min-width: 1200px) {
             @content;

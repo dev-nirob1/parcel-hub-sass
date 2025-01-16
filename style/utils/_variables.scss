@@ -1,12 +1,28 @@
 @use "../utils/mixins";
 
-//font-family
+/* ====================================================
+   Font Family
+==================================================== */
 $font-family: Rubik, sans-serif, Arial, sans-serif;
-//colors
+
+/* ====================================================
+   Color palates
+   -primary and secondary colors 
+   -dark for headings and light for paragraph and others
+==================================================== */
 $primary-color: #FE7713;
 $secondary-color: #0F142B;
 $dark-color: #172541;
 $light-color: #565872;
+$white-color: #fff;
+/* ====================================================
+   box shadow
+==================================================== */
+$shadow: 0 4px 10px 0 #58575733, 0 4px 10px 0 #63616130;
+
+/* ====================================================
+   Responsive headings size
+==================================================== */
 //h2
 $heading-1-sm: 2rem;
 $heading-1-md: 3rem;
@@ -19,14 +35,27 @@ $heading-2-lg: 3rem;
 $heading-4-sm: 1.2rem;
 $heading-4-md: 1.5rem;
 $heading-4-lg: 1.8rem;
+
+/* ====================================================
+   Responsive paragraph size
+==================================================== */
 //p
 $para-size-sm: .8rem;
 $para-size-md: 1rem;
 $para-size-lg: 1.1rem;
+
+/* ====================================================
+   Responsive margins - vertical 
+==================================================== */
 //margin    
 $margin-y-sm: .75rem 0;
 $margin-y-md: 1rem 0;
 $margin-y-lg: 1.25rem 0;
+
+/* ====================================================
+   Section Spacing
+   -margin & paddings
+==================================================== */
 $section-bottom-margin-sm: 2.5rem;
 $section-bottom-margin-md: 3rem;
 $section-bottom-margin-lg: 5rem;
@@ -37,8 +66,9 @@ $section-padding-md: 3rem;
 $section-padding-lg: 5rem;
 // $btn-padding: 
 
+/* ====================================================
+   display properties
+==================================================== */
 //flex 
 $flex: flex;
 $flex-none: none;
-$direction: row;
-

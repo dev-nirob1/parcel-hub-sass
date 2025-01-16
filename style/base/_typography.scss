@@ -1,51 +1,72 @@
 @use '../utils/variables';
 @use '../utils/mixins';
 
+/* ====================================================
+   body font-family
+==================================================== */
 body {
     font-family: variables.$font-family;
 }
 
+/* ====================================================
+font sizes for headings and paragraphs.
+==================================================== */
 h1 {
     font-size: variables.$heading-1-sm;
 }
+
 h2 {
     font-size: variables.$heading-2-sm;
 }
+
 h4 {
     font-size: variables.$heading-4-md;
 }
+
 p {
     font-size: variables.$para-size-sm;
 }
 
-
+/* ====================================================
+Medium Screen responsive
+==================================================== */
 @include mixins.responsive(medium) {
     h1 {
         font-size: variables.$heading-1-md;
     }
+
     h2 {
         font-size: variables.$heading-2-md;
     }
+
     h4 {
         font-size: variables.$heading-4-md;
     }
-    p,a {
+
+    p,
+    a {
         font-size: variables.$para-size-md;
     }
 }
 
+/* ====================================================
+ Large Screen Responsive
+==================================================== */
 @include mixins.responsive(large) {
     h1 {
         font-size: variables.$heading-1-lg;
     }
+
     h2 {
         font-size: variables.$heading-2-lg;
     }
+
     h4 {
         font-size: variables.$heading-4-lg;
     }
 
-    p, a {
+    p,
+    a {
         font-size: variables.$para-size-lg;
     }
 }

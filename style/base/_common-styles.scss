@@ -1,7 +1,16 @@
 @use "./../utils/variables";
 @use "./../utils/mixins";
 
-// utility clss 
+/* ====================================================
+   Utility Classes
+   -reusable class for text color,
+   -headings,
+   - layout containers.
+==================================================== */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
 
 .text-light {
     color: variables.$light-color;
@@ -11,16 +20,22 @@
     color: variables.$dark-color;
 }
 
-.heading-m{
+.heading-m {
     margin-bottom: 20px;
 }
 
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: variables.$para-size-sm;
+    cursor: pointer;
 }
 
-//anchor styles
+
+/* ====================================================
+   Anchor Tag with hover effects
+==================================================== */
 a {
     color: inherit;
 }
@@ -36,21 +51,16 @@ a:hover {
     text-decoration: underline;
 }
 
-//global p styles
+/* ====================================================
+   Global Paragraph Margins for p tags.
+==================================================== */
 p {
     margin: variables.$margin-y-sm
 }
 
-//btn
-.btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: variables.$para-size-sm;
-    cursor: pointer;
-}
-
-//section common styles 
+/* ====================================================
+   Section Common Styles
+==================================================== */
 #banner,
 #about,
 #track-product,
@@ -61,6 +71,10 @@ p {
     padding: variables.$section-padding-sm;
 }
 
+
+/* ====================================================
+   Responsive Styles (Medium)
+==================================================== */
 @include mixins.responsive(medium) {
 
     #about,
@@ -81,8 +95,15 @@ p {
         padding: 10px 20px;
         font-size: variables.$para-size-md;
     }
+
+    .heading-m {
+        margin-bottom: 45px;
+    }
 }
 
+/* ====================================================
+   Responsive Styles (large)
+==================================================== */
 @include mixins.responsive(large) {
 
     #about,
@@ -97,5 +118,9 @@ p {
 
     p {
         margin: variables.$margin-y-lg;
+    }
+
+    .heading-m {
+        margin-bottom: 80px;
     }
 }
