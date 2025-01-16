@@ -52,8 +52,8 @@
                     Discover
                     smarter shipping with ParcelHub today!</p>
                 <div class="btn-container">
-                    <button class="btn">Learn More</button>
-                    <button class="btn">Get Started</button>
+                    <button class="btn btn-primary">Learn More</button>
+                    <button class="btn btn-secondary">Get Started</button>
                 </div>
             </div>
         </div>
@@ -63,13 +63,13 @@
     <section id="about">
         <div class="container">
             <div class="about-content">
-                <h2>About Us</h2>
-                <p>
+                <h2 class="text-dark">About Us</h2>
+                <p class="text-light">
                     At Parcel Hub, we strive to connect people and businesses through reliable, fast, and secure
                     shipping services.
                     With a mission to make logistics effortless, we deliver trust and excellence with every package.
                 </p>
-                <p>
+                <p class="text-light">
                     Our dedication to customer satisfaction drives us to innovate and improve continuously. Whether
                     it&apos;s
                     a local delivery
@@ -102,15 +102,16 @@
     </section>
 
     <!-- services section  -->
-    <section id="services" class="container">
-        <h1>Our Services</h1>
+    <section id="services">
+        <div class="container">
+            <h1 class="heading-m text-dark">Our Services</h1>
         <div class="service-container">
             <div class="card">
                 <div>
                     <img src="./assets/services/delivery.png" alt="image">
                 </div>
-                <h4>Fast Delivery</h4>
-                <p>Enjoy lightning-fast delivery for your packages. Our efficient logistics network
+                <h4 class="text-dark">Fast Delivery</h4>
+                <p class="text-light">Enjoy lightning-fast delivery for your packages. Our efficient logistics network
                     ensures that your
                     items
                     arrive on time, every time.</p>
@@ -119,8 +120,8 @@
                 <div>
                     <img src="./assets/services/parcel.png" alt="icon">
                 </div>
-                <h4>Secure Packaging</h4>
-                <p>We provide top-notch packaging to protect your items during transit, ensuring they
+                <h4 class="text-dark">Secure Packaging</h4>
+                <p class="text-light">We provide top-notch packaging to protect your items during transit, ensuring they
                     reach their
                     destination without damage.</p>
             </div>
@@ -128,8 +129,8 @@
                 <div>
                     <img src="./assets/services/global.png" alt="icon">
                 </div>
-                <h4>Global Shipping</h4>
-                <p>Ship your goods to any corner of the globe with our reliable and cost-effective
+                <h4 class="text-dark">Global Shipping</h4>
+                <p class="text-light">Ship your goods to any corner of the globe with our reliable and cost-effective
                     international
                     shipping
                     solutions.</p>
@@ -138,8 +139,8 @@
                 <div>
                     <img src="./assets/services/tracking.png" alt="">
                 </div>
-                <h4>Real-Time Tracking</h4>
-                <p>Monitor your shipment at every step with our real-time tracking system, keeping you
+                <h4 class="text-dark">Real-Time Tracking</h4>
+                <p class="text-light">Monitor your shipment at every step with our real-time tracking system, keeping you
                     informed and
                     worry-free.</p>
             </div>
@@ -147,8 +148,8 @@
                 <div>
                     <img src="./assets/services/customize.png" alt="icon">
                 </div>
-                <h4>Customizable Solutions</h4>
-                <p>Whether you need bulk shipments or special handling, we offer personalized solutions
+                <h4 class="text-dark">Customizable Solutions</h4>
+                <p class="text-light">Whether you need bulk shipments or special handling, we offer personalized solutions
                     to meet your
                     unique
                     needs.</p>
@@ -157,17 +158,18 @@
                 <div>
                     <img src="./assets/services/suppport.png" alt="icon">
                 </div>
-                <h4>24/7 Customer Support</h4>
-                <p>Our dedicated support team is available round the clock to assist you with any
+                <h4 class="text-dark">24/7 Customer Support</h4>
+                <p class="text-light">Our dedicated support team is available round the clock to assist you with any
                     queries or issues you
                     might have.</p>
             </div>
+        </div>
         </div>
     </section>
 
     <!-- testimonials section  -->
     <section id="testimonials">
-        <h1>Testimonials</h1>
+        <h1 class="text-dark heading-m">Testimonials</h1>
         <div class="container testimo-container">
             <div class="tesimo-card">
                 <div class="card-header">
@@ -200,10 +202,11 @@
     </section>
 
     <!-- contact section  -->
-    <section>
-        <h1>Get In Touch</h1>
+    <section id="contact">
         <div class="container">
-            <div>
+            <h1>Get In Touch</h1>
+        <div class="contact-info">
+            <div class="info">
                 <h4>Contact Us</h4>
                 <p>We would love to hear from you! Reach out to us through the form below or use
                     the
@@ -224,7 +227,7 @@
                 </div>
             </div>
 
-            <form>
+            <form class="form">
                 <div>
                     <label for="name">Name*</label>
                     <input type="text" name="name" required placeholder="Name">
@@ -238,9 +241,10 @@
                     <textarea name="message" required rows="4" placeholder="Write Your Message"></textarea>
                 </div>
                 <div>
-                    <button type="submit">Submit</button>
+                    <button class="btn" type="submit">Submit</button>
                 </div>
             </form>
+        </div>
         </div>
     </section>
 
